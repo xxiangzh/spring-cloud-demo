@@ -13,4 +13,11 @@
     <artifactId>eureka-service</artifactId>
     <version>1.0.0</version>
 
+    <dependencies>
+        <!--注册中心-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+    </dependencies>
 </project>
