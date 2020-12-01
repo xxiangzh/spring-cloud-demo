@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author 向振华
  * @date 2020/12/01 12:00
  */
-@FeignClient(value = "product-service")
+@FeignClient(name = "product-service", path = "/product-service")
 public interface ProductClient {
 
     @GetMapping("/hi")
