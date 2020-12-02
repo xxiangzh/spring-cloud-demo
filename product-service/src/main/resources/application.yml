@@ -1,5 +1,5 @@
 server:
-  port: 8100
+  port: 8101
   servlet:
     context-path: /product-service
 
@@ -13,3 +13,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/
+  instance:
+    metadata-map:
+      routingTag: xzh

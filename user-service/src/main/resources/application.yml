@@ -13,3 +13,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8000/eureka/
+
+product-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.xzh.user.config.MyRule
+
+ribbon:
+  eager-load:
+    enabled: true
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 3
