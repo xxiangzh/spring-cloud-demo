@@ -1,11 +1,11 @@
 server:
-  port: 8400
+  port: 8200
   servlet:
-    context-path: /user-service
+    context-path: /order-service
 
 spring:
   application:
-    name: user-service
+    name: product-service
   profiles:
     active: dev
 

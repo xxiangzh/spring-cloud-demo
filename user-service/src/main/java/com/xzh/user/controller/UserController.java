@@ -1,5 +1,6 @@
 package com.xzh.user.controller;
 
+import com.xzh.user.feign.OrderClient;
 import com.xzh.user.feign.ProductClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,9 @@ public class UserController {
     @Autowired
     private ProductClient productClient;
 
+    @Autowired
+    private OrderClient orderClient;
+
     @GetMapping("/hi")
     public String hi() {
         return "Hello World! User";
@@ -25,5 +29,10 @@ public class UserController {
     @GetMapping("/product")
     public String product() {
         return productClient.hi();
+    }
+
+    @GetMapping("/order")
+    public String order() {
+        return orderClient.hi();
     }
 }
